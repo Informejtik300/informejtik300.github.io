@@ -28,7 +28,6 @@ body[data-theme="dark"] #pasek_nav_gorny .ramka:hover{ background-color: #505050
 .bodyDark {
     background-color: #151515;
     color: #cacaca;
-    transition: 0.5s;
 }
 
 /* Pasek górny nawigacji */
