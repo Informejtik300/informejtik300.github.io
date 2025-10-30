@@ -1,0 +1,137 @@
+/* Ukrycie widgetu Google Translate */
+.goog-te-banner-frame.skiptranslate,
+.goog-te-gadget-icon,
+.goog-te-combo {
+    display: none !important;
+}
+body {
+    top: 0 !important;
+}
+
+/* Bright mode */
+#phone-ico { content: url(Zdjecia/Systemowe/phone-call-black.svg); }
+#mail-box-ico { content: url(Zdjecia/Systemowe/email-box-black.svg); }
+#facebook-ico { content: url(Zdjecia/Systemowe/facebook-black.svg); }
+#themeIcon { content: url(Zdjecia/Systemowe/dark-bright-black.svg); }
+#baner { content: url(Zdjecia/Systemowe/banerArtan\(bialy\).png); }
+#pasek_nav_gorny .ramka{ border: 1px solid #151515; }
+#pasek_nav_gorny .ramka:hover{ background-color: #ccc; }
+
+/* Dark mode */
+body[data-theme="dark"] #phone-ico { content: url(Zdjecia/Systemowe/phone-call-white.svg); }
+body[data-theme="dark"] #mail-box-ico { content: url(Zdjecia/Systemowe/email-box-white.svg); }
+body[data-theme="dark"] #facebook-ico { content: url(Zdjecia/Systemowe/facebook-white.svg); }
+body[data-theme="dark"] #themeIcon { content: url(Zdjecia/Systemowe/dark-bright-white.svg); }
+body[data-theme="dark"] #baner { content: url(Zdjecia/Systemowe/banerArtan\(szary\).png); }
+body[data-theme="dark"] #pasek_nav_gorny .ramka{ border: 1px solid #cacaca; }
+body[data-theme="dark"] #pasek_nav_gorny .ramka:hover{ background-color: #505050; }
+.bodyDark {
+    background-color: #151515;
+    color: #cacaca;
+    transition: 0.5s;
+}
+
+/* Pasek górny nawigacji */
+#pasek_nav_gorny {
+    width: 90%;
+    height: 20px;
+    margin: auto;
+    font-size: 18px;
+}
+#pasek_nav_gorny .ramka {
+    float: left;
+    border-radius: 8px;
+    padding: 2px;
+    margin-left: 3px;
+    width: 150px;
+    height: 20px;
+}
+#pasek_nav_gorny .ramka:hover {
+    cursor: pointer;
+}
+#pasek_nav_gorny #text {
+    margin-bottom: 5px;
+    float: right;
+}
+#pasek_nav_gorny a {
+    float: right;
+    margin-top: 1px;
+}
+#pasek_nav_gorny img {
+    width: 18px;
+    height: 18px;
+    margin-top: 1px;
+}
+#pasek_nav_gorny select {
+    float: right;
+    margin: 1px 12px 0 0;
+    width: 200px;
+}
+/* Switch */
+#motyw {
+    float: right;
+    margin-right: 40px;
+    margin-top: -3px;
+}
+#themeIcon {
+    float: right;
+    margin-right: 6px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 24px;
+    border: 2px solid black;
+    border-radius: 25px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cecece;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+.switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 3px;
+    bottom: 2px;
+    background-color: #818181;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+.switch input:checked + .slider {
+    background-color: white;
+}
+.switch input:checked + .slider:before {
+    transform: translateX(19px);
+}
+
+/* Baner strony */
+header {
+    width: fit-content;
+    height: auto;
+    min-width: max-content;
+    max-width: 100%;
+    min-height: 300px;
+    max-height: 400px;
+    margin: auto;
+}
+header img {
+    max-width: 100%;
+    min-height: 300px;
+    max-height: 400px;
+    margin: auto;
+}
