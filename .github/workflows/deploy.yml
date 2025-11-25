@@ -1,14 +1,17 @@
 name: FTP Deploy
+
 on:
   push:
     branches:
       - main
+
 jobs:
   ftp-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+
       - name: Deploy site via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4
         with:
@@ -17,5 +20,5 @@ jobs:
           password: ${{ secrets.FTP_PASS }}
           port: 21
           protocol: ftp
-          local-dir: ./          
-          remote-dir: /htdocs    
+          local-dir: ./main
+          remote-dir: /htdocs
