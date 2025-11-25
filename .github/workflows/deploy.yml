@@ -1,24 +1,24 @@
-name: FTP Deploy
+name: Deploy to InfinityFree
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]  # Lub 'master' – gałąź, na której chcesz auto-deploy
 
 jobs:
-  ftp-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
+    - uses: actions/checkout@v4  # Pobiera kod z repo
 
-      - name: Deploy site via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USER }}
-          password: ${{ secrets.FTP_PASS }}
-          port: 21
-          protocol: ftp
-          local-dir: ./
-          remote-dir: /htdocs
+    - name: Deploy via FTP
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5  # Popularna akcja do FTP
+      with:
+        server: ${{ secrets.FTP_SERV }}
+        username: ${{ secrets.FTP_USER }}
+        password: ${{ secrets.FTP_PASS }}
+        local-dir: ./  # Lokalny folder do uploadu (dostosuj, np. ./public)
+        server-dir: ${{ secrets.DEPLOY_PATH }}  # Ścieżka na serwerze
+        exclude: |  # Wyklucz pliki, których nie chcesz nadpisywać
+          **/.git*
+          **/.github*
+          README.md
