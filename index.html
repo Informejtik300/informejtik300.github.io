@@ -16,26 +16,33 @@
     </script>
 </head>
 <body data-theme="light">
-    <div id="google_translate_element" style="display:none;"></div>
-    <nav id="pasek_nav_gorny">
-        <div class="ramka" onclick="zadzwon()">
-            <img id="phone-ico" src="Zdjecia/Systemowe/phone-call-black.svg" alt="tel_icon">
-            <div id="text">+48 524 658 624</div>
+<div id="google_translate_element" style="display:none;"></div>
+<nav class="navbar navbar-expand py-2 border-bottom" id="nav">
+    <div class="container-fluid px-4 px-md-5">
+        <div class="d-flex align-items-center gap-4">
+            <div class="d-flex align-items-center gap-2 cursor-pointer" onclick="zadzwon()">
+                <img id="phone-ico" src="Zdjecia/Systemowe/phone-call-black.svg" alt="tel" width="18" height="18">
+                <span class="d-none d-md-block">+48 524 658 624</span>
+            </div>
+            <div class="d-flex align-items-center gap-2 cursor-pointer" onclick="window.location.href='mailto:kontakt@arrtan.pl'">
+                <img id="mail-box-ico" src="Zdjecia/Systemowe/email-box-black.svg" alt="mail" width="18" height="18">
+                <span class="d-none d-md-block">kontakt@arrtan.pl</span>
+            </div>
+            </div>
+        <div class="d-flex align-items-center gap-3">
+            <a href="https://www.facebook.com/share/1BeRS2TXNS/" target="_blank">
+                <img id="facebook-ico" src="Zdjecia/Systemowe/facebook-black.svg" alt="fb" width="22" height="22">
+            </a>
+            <div class="d-flex align-items-center gap-2">
+                <img src="Zdjecia/Systemowe/dark-bright-black.svg" alt="theme" id="themeIcon" width="20" height="20">
+                <label class="switch" id="motyw">
+                    <input type="checkbox" id="themeToggle">
+                    <span class="slider"></span>
+                </label>
+            </div>
         </div>
-        <div class="ramka" onclick="window.location.href='mailto:kontakt@arrtan.pl'">
-            <img id="mail-box-ico" src="Zdjecia/Systemowe/email-box-black.svg" alt="email_icon">
-            <div id="text">kontakt@arrtan.pl</div>
-        </div>
-        <a href="https://www.facebook.com/share/1BeRS2TXNS/">
-            <img id="facebook-ico" src="Zdjecia/Systemowe/facebook-black.svg" alt="facebook_icon">
-        </a>
-        <label class="switch" id="motyw">
-            <input type="checkbox" id="themeToggle">
-            <span class="slider"></span>
-        </label>
-        <img src="Zdjecia/Systemowe/dark-bright-black.svg" alt="theme" id="themeIcon">
-    </nav>
-    <hr>
+    </div>
+</nav>
     <header>
         <img id="baner" src="Zdjecia/Systemowe/banerArtan(szary).png" alt="baner">
     </header>
